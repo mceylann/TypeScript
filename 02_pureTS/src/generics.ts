@@ -39,4 +39,38 @@ logging(testNumbers);
 
 logging(testStrings);
 
+/**
+ *   Generics & Arrow Functions
+ */
+
+const getProductByID = <T,>(products: T[]): T => { // <T,> gösterimi özellikle generic oldugunu belirtmek icin
+    // işlemler vs
+    let index = 11;
+    return products[index];
+}
+
+
+/**
+ *   Generic Classes
+ * 
+ * Neden ? 
+ * 
+ */
+
+interface Database{
+    connection: string,
+    username: string,
+    passwd: string,
+}
+
+// 2. parametre olarak, "herhangi bir şey gelebilir ama Database olmak zorunda"
+function randomFunction<T, U extends Database>(valOne: T, valTwo: U ): object{
+    return {
+        valOne,
+        valTwo    
+    }
+}
+
+randomFunction(11, {connection:"1123", username:"mceylan", passwd:"12346"}); // ok!
+
 export {}

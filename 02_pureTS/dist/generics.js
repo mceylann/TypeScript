@@ -31,3 +31,19 @@ const testNumbers = [1, 1, 2, 3, 5, 8];
 const testStrings = ["11", "clear", "archer"];
 logging(testNumbers);
 logging(testStrings);
+/**
+ *   Generics & Arrow Functions
+ */
+const getProductByID = (products) => {
+    // işlemler vs
+    let index = 11;
+    return products[index];
+};
+// 2. parametre olarak, "herhangi bir şey gelebilir ama Database olmak zorunda"
+function randomFunction(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo
+    };
+}
+randomFunction(11, { connection: "1123", username: "mceylan", passwd: "12346" }); // ok!
