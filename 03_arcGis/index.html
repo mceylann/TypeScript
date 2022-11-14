@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arcgis test</title>
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.25/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.25/"></script>
+    <style>
+      html,
+      body,
+      #MapViewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .ToolBar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+      }
+    </style>
+    <script src="./dist/app.js"></script>
+    <script defer>
+      require(["startup"]);
+    </script>
+  </head>
+  <body>
+    <div id="MapViewDiv"></div>
+    <div class="ToolBar">
+      <button data-cmdid="izmir">izmir</button>
+      <button data-cmdid="suprise">suprise</button>
+    </div>
+  </body>
+</html>
