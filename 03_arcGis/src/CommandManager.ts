@@ -1,4 +1,4 @@
-import { CommandIzmır, CommandSuprise } from "./commands";
+import { CommandIzmır, CommandSuprise, GetRoofPictures } from "./commands";
 import { IApp, ICommand } from "./types";
 
 export default class CommandManager {
@@ -14,6 +14,7 @@ export default class CommandManager {
         this.m_cmdMap = new Map();
         this.registerCmd(new CommandIzmır(this.app));
         this.registerCmd(new CommandSuprise(this.app));
+        this.registerCmd(new GetRoofPictures(this.app));
 
         var buttons = document.querySelectorAll(".ToolBar button");
         for(let btn of buttons){
